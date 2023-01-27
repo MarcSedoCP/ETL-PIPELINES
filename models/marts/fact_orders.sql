@@ -12,3 +12,5 @@ select
     Deal_Size
 
 from {{ref('stg_orders')}}
+
+left join dim_products using (Product_Code)
