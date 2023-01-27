@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: dim_customers
+    columns:
+      - name: Customer_ID
+        tests:
+          - unique
+          - not_null
