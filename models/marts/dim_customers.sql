@@ -1,6 +1,5 @@
 select
 
-    seq_customers.nextval as Customer_ID,
     Customer_Name,
     Phone,
     Address_Line,
