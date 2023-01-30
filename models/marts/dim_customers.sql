@@ -4,11 +4,7 @@ select
     Customer_Name,
     Phone,
     Address_Line,
-    City,
-    State,
     Postal_Code,
-    Country,
-    Territory,
     Contact_Name
 
 from {{ref('stg_orders')}}
