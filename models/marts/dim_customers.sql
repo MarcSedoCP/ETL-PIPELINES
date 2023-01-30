@@ -1,5 +1,6 @@
 select
 
+    ROW_NUMBER() OVER(ORDER BY Customer_Name) AS Customer_ID,
     Customer_Name,
     Phone,
     Address_Line,
