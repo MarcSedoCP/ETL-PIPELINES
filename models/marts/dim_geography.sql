@@ -1,6 +1,6 @@
 select
 
-    seq_geography.nextval as City_ID,
+    ROW_NUMBER() OVER(ORDER BY City) AS City_ID,
     City,
     State,
     Country,
