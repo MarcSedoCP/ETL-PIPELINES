@@ -1,0 +1,8 @@
+CREATE SEQUENCE seq_customers
+  START WITH 1
+  INCREMENT BY 1;
+
+CREATE SEQUENCE seq_geography
+  START WITH 1
+  INCREMENT BY 1;
+
