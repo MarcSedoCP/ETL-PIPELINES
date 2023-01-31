@@ -3,7 +3,7 @@ select
     Order_Number,
     Order_Line_Number,
     prod.Product_Code,
-    cust.Customer_ID,
+    cust.customer_wid,
     geo.City_ID,
     Quantity_Ordered,
     Price_Each,
