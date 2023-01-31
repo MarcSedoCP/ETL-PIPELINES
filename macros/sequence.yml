@@ -1,5 +1,0 @@
-{% macro sequence(sequence_name) %}
-    SELECT nextval(
-        '{{ sequence_name }}'
-    )
-{% endmacro %}
