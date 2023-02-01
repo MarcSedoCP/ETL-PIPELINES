@@ -9,7 +9,6 @@ select
     PRICE_EACH,
     SALES,
     ORDER_DATE,
-    STATE,
     DEAL_SIZE
 
 from {{ref('stg_orders')}} ORD
