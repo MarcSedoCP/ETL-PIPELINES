@@ -1,21 +1,21 @@
 SELECT 
-    seq_cust.nextval as customer_wid,
+    seq_customers.nextval as CUSTOMER_WID,
     A.CUSTOMER_NAME,
-    A.phone,
-    A.address_line,
-    A.postal_code,
-    A.contact_name,
+    A.PHONE,
+    A.ADDRESS_LINE,
+    A.POSTAL_CODE,
+    A.CONTACT_NAME,
     current_timestamp() as CREATED_DATE
    FROM 
 (select
 
 
-    customer_name AS CUSTOMER_NAME,
-    phone,
-    address_line,
-    postal_code,
-    contact_name
+    CUSTOMER_NAME,
+    PHONE,
+    ADDRESS_LINE,
+    POSTAL_CODE,
+    CONTACT_NAME
 
 from {{ref('stg_orders')}}
 
-group by customer_name, phone, address_line, postal_code, contact_name) A
+group by CUSTOMER_NAME, PHONE, ADDRESS_LINE, POSTAL_CODE, CONTACT_NAME) A

@@ -1,19 +1,20 @@
 select
 
-    Order_Number,
-    Order_Line_Number,
-    prod.Product_Code,
-    cust.customer_wid,
-    geo.City_ID,
-    Quantity_Ordered,
-    Price_Each,
-    Sales,
-    Order_Date,
-    Status,
-    Deal_Size
+    ORDER_NUMBER,
+    ORDER_LINE_NUMBER,
+    PROD.PRODUCT_WID,
+    CUST.CUSTOMER_WID,
+    GEO.GEO_WID,
+    QUANTITY_ORDERED,
+    PRICE_EACH,
+    SALES,
+    ORDER_DATE,
+    STATE,
+    DEAL_SIZE
 
-from {{ref('stg_orders')}} ord
+from {{ref('stg_orders')}} ORD
 
-left join dim_products prod on ord.Product_Code = prod.Product_Code
-left join dim_customers cust on ord.Customer_Name = cust.Customer_Name
-left join dim_geography geo on ord.City = geo.City and ord.Country = geo.Country
+
+LEFT JOIN dim_products PROD ON ORD.PRODUCT_CODE = PROD.PRODUCT_CODE
+LEFT JOIN dim_customers CUST ON ORD.CUSTOMER_NAME = CUST.CUSTOMER_NAME
+LEFT JOIN dim_geography GEO ON ORD.CITY = GEO.CITY AND ORD.COUNTRY = GEO.COUNTRY

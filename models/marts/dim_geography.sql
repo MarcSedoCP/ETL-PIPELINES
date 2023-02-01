@@ -1,11 +1,21 @@
 select
 
-    ROW_NUMBER() OVER(ORDER BY City) AS City_ID,
-    City,
-    State,
-    Country,
-    Territory
+    seq_geography.nextval AS GEO_WID,
+    A.CITY,
+    A.STATE,
+    A.COUNTRY,
+    A.TERRITORY,
+    current_timestamp() AS CREATED_DATE
+
+FROM
+
+(select
+
+    CITY,
+    STATE,
+    COUNTRY,
+    TERRITORY
 
 from {{ref('stg_orders')}}
 
-group by City, State, Country, Territory
+group by CITY, STATE, COUNTRY, TERRITORY) A 
