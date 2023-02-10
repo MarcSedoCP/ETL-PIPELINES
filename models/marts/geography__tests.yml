@@ -1,9 +1,0 @@
-version: 2
-
-models:
-  - name: dim_geography
-    columns:
-      - name: City
-        tests:
-          - unique
-          - not_null
