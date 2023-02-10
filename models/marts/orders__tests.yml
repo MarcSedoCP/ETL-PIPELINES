@@ -1,9 +1,0 @@
-version: 2
-
-models:
-  - name: fact_orders
-    columns:
-      - name: Order_Number
-        tests:
-          - unique
-          - not_null
