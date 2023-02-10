@@ -9,6 +9,7 @@ select
     PRICE_EACH,
     SALES,
     ORDER_DATE,
+    TO_CHAR(DATE_COLUMN_, 'DDMMYYYY') as DATE_WID,
     DEAL_SIZE
 
 from {{ref('stg_orders')}} ORD

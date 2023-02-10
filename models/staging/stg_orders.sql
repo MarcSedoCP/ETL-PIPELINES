@@ -6,6 +6,8 @@ select
     orderlinenumber as ORDER_LINE_NUMBER,
     sales as SALES,
     orderdate as ORDER_DATE,
+    SUBSTR(orderdate, 1, LENGTH(orderdate) - 5) as DATE_COLUMN,
+    TO_DATE(DATE_COLUMN) as DATE_COLUMN_,
     status as STATUS,
     productline as PRODUCT_LINE,
     msrp as MSRP,
