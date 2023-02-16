@@ -8,6 +8,7 @@ select
     orderdate as ORDER_DATE,
     SUBSTR(orderdate, 1, LENGTH(orderdate) - 5) as DATE_COLUMN,
     TO_DATE(DATE_COLUMN) as DATE_COLUMN_,
+    TO_CHAR(DATE_COLUMN_, 'DDMMYYYY') as DATE_WID,
     status as STATUS,
     productline as PRODUCT_LINE,
     msrp as MSRP,
