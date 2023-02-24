@@ -9,7 +9,9 @@ models:
         description: Table primary key
         tests:
           - not_null
-          - unique
+          - dbt_expectations.expect_column_values_to_be_unique
+          
+          
           
 
   - name: dim_geography
