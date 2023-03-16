@@ -9,7 +9,10 @@ models:
         description: Table primary key
         tests:
           - not_null
-          - unique
+          - dbt_expectations.expect_column_values_to_be_unique
+          - dbt_expectations.expect_column_values_to_be_decreasing
+          
+          
           
 
   - name: dim_geography
@@ -21,6 +24,7 @@ models:
         tests:
           - not_null
           - unique
+
           
 
 

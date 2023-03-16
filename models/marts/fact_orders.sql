@@ -8,7 +8,9 @@ select
     DATE_WID,
     QUANTITY_ORDERED,
     PRICE_EACH AS "UNITARY_PRICE",
+    {{ convert_price_to_pounds('PRICE_EACH', 0.85) }} as POUNDS,
     SALES,
+    STATUS,
     ORDER_DATE,
     DEAL_SIZE
 
