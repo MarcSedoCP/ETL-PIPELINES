@@ -5,4 +5,4 @@ def model(dbt, session):
     # DataFrame representing an upstream model
     df = dbt.ref("dim_customers")
  
-    return df 
+    return df  
