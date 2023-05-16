@@ -16,7 +16,6 @@ select
 
 from {{ref('stg_orders')}} ORD
 
--- joins
 
 LEFT JOIN dim_products PROD ON ORD.PRODUCT_CODE = PROD.PRODUCT_CODE
 LEFT JOIN dim_customers CUST ON ORD.CUSTOMER_NAME = CUST.CUSTOMER_NAME
